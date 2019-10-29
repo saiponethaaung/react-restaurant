@@ -1,0 +1,108 @@
+$mborder: 1.5px solid $menuborder;
+$menuborderUnit: 20px;
+
+.menuContent ul {
+    padding: 0;
+}
+
+.menuContent ul li {
+    list-style: none;
+    display: inline-block;
+    padding-right: 40px;
+    letter-spacing: 2px;
+}
+
+.menuContent ul li:last-child {
+    padding-right: 0;
+}
+
+.menuContent ul li:hover {
+    cursor: pointer;
+}
+
+.menuContent ul li:hover .menuValue {
+    border-bottom: $mborder;
+}
+
+.menuValue {
+    padding-bottom: 10px;
+}
+
+.active .menuValue {
+    border-bottom: $mborder;
+}
+
+.menuList {
+    display: inline-block;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.menuItem {
+    width: 25%;
+    margin-top: 10px;
+    display: inline-block;
+}
+
+.menuItem:hover {
+    cursor: pointer;
+}
+
+.menuItem figure {
+    width: 100%;
+    overflow: hidden;
+    padding: 10px;
+}
+
+.menuItem figure img {
+    width: 100%;
+    overflow: hidden;
+    border: $mborder;
+}
+
+.hidecontent {
+    display: none;
+}
+
+#menuPreview {
+    background: $white;
+    max-width: 350px;
+    width: 100%;
+    height: 100%;
+    padding: $menuborderUnit;
+    padding-top: 0;
+    overflow: auto;
+}
+
+#menuPreview figure {
+    width: calc(100% + #{$menuborderUnit * 2});
+    margin-left: -$menuborderUnit;
+    overflow: hidden;
+}
+
+#menuPreview figure img {
+    width: 100%;
+}
+
+.openMenuPreview {
+    right: 0 !important;
+}
+
+.openMenuPreview #menuPreview {
+    display: inline-block;
+}
+
+#menuPreviewContent {
+    padding: 5px;
+}
+
+.avaTime {
+    display: inline-flex;
+    display: -webkit-inline-flex;
+    align-items: center;
+    -webkit-align-items: center;
+}
+
+.avaIcon {
+    padding-right: 10px;
+}

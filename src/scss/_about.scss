@@ -1,0 +1,55 @@
+#aboutTimeline {
+    width: 100%;
+    position: relative;
+}
+
+.timelineList {
+    text-align: center;
+    list-style: none;
+    display: inline-block;
+    position: relative;
+    margin: 0;
+    padding: 0 40px;
+}
+
+.timelineDetail {
+    @extend .timelineList;
+    background: $color1;
+    z-index: 11;
+    position: relative;
+    margin-bottom: 35px;
+    float: left;
+}
+
+.timelineDetail:last-child {
+    margin-bottom: 0;
+}
+
+.timelineDetail:last-child:after {
+    display: none;
+}
+
+.timelineDetail:after {
+    position: absolute;
+    content: '';
+    background: $borderline;
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+    left: -100%;
+    right: -100%;
+    margin: auto;
+    bottom: -21.5px;
+}
+
+.seperator {
+    position: absolute;
+    height: calc(100% - 20px);
+    border: 1px solid $borderline;
+    width: 0px;
+    top: 0;
+    margin: auto;
+    left: calc(-100% + 1.5px);
+    right: -100%;
+    z-index: 9;
+}

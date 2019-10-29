@@ -1,0 +1,42 @@
+/* Boxes */
+.mainBox {
+    width: 100%;
+    display: inline-block;
+}
+
+.innerBox {
+    padding: $bpadding;
+    width: calc(50% - #{$boxGap});
+    float: left;
+    margin-top: $boxTopMargin;
+    text-align: center;
+}
+
+.mainBox .innerBox:first-child {
+    margin-right: $boxGap;
+}
+
+.mainBox .innerBox:last-child {
+    margin-left: $boxGap;
+}
+
+.innerBox figure {
+    position: relative;
+}
+
+.innerBox figure img {
+    width: 100%;
+    margin: auto;
+}
+
+.innerBox p {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.innerBox .resBtn {
+    margin: 0 auto;
+    border: 1px solid $mainBoxColor;
+    display: inline-block;
+    padding: 9px 30px;
+}
