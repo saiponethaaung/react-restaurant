@@ -3,10 +3,16 @@ import { Route, Switch } from 'react-router-dom';
 import HomePage from './pages/HomePage';
 import { RouteObj } from './types';
 import AboutUsPage from './pages/AboutUsPage';
+import ServicePage from './pages/ServicePage';
 
 const homeRoute: RouteObj = {
     url: "/",
     component: HomePage,
+};
+
+const serviceRoute: RouteObj = {
+    url: "/service",
+    component: ServicePage,
 };
 
 const aboutRoute: RouteObj = {
@@ -16,7 +22,8 @@ const aboutRoute: RouteObj = {
 
 const NamedRoutes = {
     home: homeRoute,
-    aboutus: aboutRoute
+    aboutus: aboutRoute,
+    service: serviceRoute,
 };
 
 class AppRoutes extends React.Component {
@@ -25,6 +32,7 @@ class AppRoutes extends React.Component {
             <Switch>
                 <Route exact path="/" component={NamedRoutes.home.component}></Route>
                 <Route exact path={NamedRoutes.aboutus.url} component={NamedRoutes.aboutus.component}></Route>
+                <Route exact path={NamedRoutes.service.url} component={NamedRoutes.service.component}></Route>
             </Switch>
         );
     }

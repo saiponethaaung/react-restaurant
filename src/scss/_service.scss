@@ -2,8 +2,7 @@
     margin-top: 0;
 }
 
-.sec1,
-.sec2 {
+.serviceItem {
     display: inline-block;
     width: 100%;
     padding: 50px 0;
@@ -11,8 +10,7 @@
     margin-top: 15px;
 }
 
-.sec1 figure,
-.sec2 figure {
+.serviceItem figure {
     position: absolute;
     width: 50%;
     height: 100%;
@@ -20,8 +18,7 @@
     top: 0;
 }
 
-.sec1 figure img,
-.sec2 figure img {
+.serviceItem figure img {
     position: absolute;
     top: -100%;
     bottom: -100%;
@@ -29,34 +26,34 @@
     width: 100%;
 }
 
-.sec1 figure {
+.serviceItem:nth-child(odd) figure {
     float: left;
     left: 0;
 }
 
-.sec2 figure {
+.serviceItem:nth-child(even) figure {
     float: right;
     right: 0;
 }
 
-.sec1 p {
+.serviceItem:nth-child(odd) p {
     float: right;
     width: 50%;
     padding-left: 20px;
 }
 
-.sec2 p {
+.serviceItem:nth-child(even) p {
     float: left;
     width: 50%;
     padding-right: 20px;
 }
 
-.sec2 figure:after {
+.serviceItem:nth-child(even) figure:after {
     width: 0;
     content: '';
     height: 0;
     border-right: 0px solid transparen;
-    border-left: 131px solid #f9f9f9;
+    border-left: 131px solid #ffffff;
     border-bottom: 300px solid transparent;
     margin: auto;
     position: absolute;
@@ -65,12 +62,12 @@
     bottom: -100%;
 }
 
-.sec1 figure:after {
+.serviceItem:nth-child(odd) figure:after {
     width: 0;
     content: '';
     height: 0;
     border-left: 0px solid transparent;
-    border-right: 131px solid #f9f9f9;
+    border-right: 131px solid #ffffff;
     border-bottom: 300px solid transparent;
     margin: auto;
     position: absolute;
@@ -80,23 +77,20 @@
 }
 
 @media screen and (max-width: 700px) {
-    .sec1,
-    .sec2 {
+    .serviceItem {
         padding: 10px 0;
 
-        .sec1 figure,
-        .sec2 figure {
+        .serviceItem figure {
             position: static;
             width: 100%;
         }
 
-        .sec1 figure img,
-        .sec2 figure img {
+        .serviceItem figure img {
             position: static;
             width: 100%;
         }
 
-        .sec2 figure:after {
+        .serviceItem:nth-child(even) figure:after {
             width: 0;
             content: '';
             height: 0;
@@ -104,7 +98,7 @@
             position: static;
         }
 
-        .sec1 figure:after {
+        .serviceItem:nth-child(odd) figure:after {
             width: 0;
             content: '';
             height: 0;
@@ -112,8 +106,7 @@
             position: static;
         }
 
-        .sec1 p,
-        .sec2 p {
+        .serviceItem p {
             width: 100%;
             padding-left: 0;
             padding-right: 0;

@@ -17,9 +17,9 @@ export default class NavComponent extends React.Component {
               </Link>
             </li>
             <li>
-              <a href="/service" className="menuLink">
+              <Link to={NamedRoutes.service.url} className="menuLink">
                 <span className="menuText">Service</span>
-              </a>
+              </Link>
             </li>
             <li>
               <a href="/menu" className="menuLink">

@@ -14,7 +14,7 @@ export default class AboutUsPage extends React.Component {
       <section>
         <header className="homeContent">
           <figure>
-            <img src="/images/pages/about/banner.jpg" className="imgres" />
+            <img src="/images/pages/about/banner.jpg" alt="" className="imgres" />
           </figure>
           <h1>About SOGBU</h1>
           <p>
