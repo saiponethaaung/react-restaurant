@@ -32,9 +32,9 @@ export default class NavComponent extends React.Component {
               </Link>
             </li >
             <li>
-              <a href="/contact" className="menuLink">
+              <Link to={NamedRoutes.contact.url} className="menuLink">
                 <span className="menuText">Contact</span>
-              </a>
+              </Link>
             </li >
           </ul >
         </nav >

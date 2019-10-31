@@ -17,11 +17,11 @@ export default class App extends React.Component {
           </nav>
         </header>
         <NavComponent />
-        <main id="content">
+        <section id="content">
           <section className="rootView">
             <AppRoutes />
           </section>
-        </main>
+        </section>
       </BrowserRouter>
     );
   }
