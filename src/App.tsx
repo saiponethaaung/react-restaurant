@@ -2,26 +2,17 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './scss/app.scss';
 import { BrowserRouter } from 'react-router-dom';
-import { AppRoutes } from './routes';
 import NavComponent from './components/NavComponent';
+import HeaderComponent from './components/HeaderComponent';
+import BodyComponent from './components/BodyComponent';
 
 export default class App extends React.Component {
   render(): React.ReactNode {
     return (
       <BrowserRouter>
-        <header id="headerNav">
-          <nav>
-            <button id="openSidebar">
-              <i className="material-icons">menu</i>
-            </button>
-          </nav>
-        </header>
+        <HeaderComponent />
         <NavComponent />
-        <section id="content">
-          <section className="rootView">
-            <AppRoutes />
-          </section>
-        </section>
+        <BodyComponent />
       </BrowserRouter>
     );
   }
