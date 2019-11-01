@@ -5,6 +5,7 @@ import { RouteObj } from './types';
 import AboutUsPage from './pages/AboutUsPage';
 import ServicePage from './pages/ServicePage';
 import ContactPage from './pages/ContactPage';
+import MenuPage from './pages/MenuPage';
 
 const homeRoute: RouteObj = {
     url: "/",
@@ -26,11 +27,17 @@ const contactRoute: RouteObj = {
     component: ContactPage,
 };
 
+const menuRoute: RouteObj = {
+    url: "/menu",
+    component: MenuPage,
+};
+
 const NamedRoutes = {
     home: homeRoute,
     aboutus: aboutRoute,
     service: serviceRoute,
     contact: contactRoute,
+    menu: menuRoute,
 };
 
 class AppRoutes extends React.Component {
@@ -41,6 +48,7 @@ class AppRoutes extends React.Component {
                 <Route exact path={NamedRoutes.aboutus.url} component={NamedRoutes.aboutus.component}></Route>
                 <Route exact path={NamedRoutes.service.url} component={NamedRoutes.service.component}></Route>
                 <Route exact path={NamedRoutes.contact.url} component={NamedRoutes.contact.component}></Route>
+                <Route exact path={NamedRoutes.menu.url} component={NamedRoutes.menu.component}></Route>
             </Switch>
         );
     }

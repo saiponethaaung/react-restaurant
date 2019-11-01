@@ -22,9 +22,9 @@ export default class NavComponent extends React.Component {
               </Link>
             </li>
             <li>
-              <a href="/menu" className="menuLink">
+              <Link to={NamedRoutes.menu.url} className="menuLink">
                 <span className="menuText">Menu</span>
-              </a>
+              </Link>
             </li>
             <li>
               <Link to={NamedRoutes.aboutus.url} className="menuLink">
