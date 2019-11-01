@@ -8,50 +8,50 @@ import ContactPage from './pages/ContactPage';
 import MenuPage from './pages/MenuPage';
 
 const homeRoute: RouteObj = {
-    url: "/",
-    component: HomePage,
+  url: "/",
+  component: HomePage,
 };
 
 const serviceRoute: RouteObj = {
-    url: "/service",
-    component: ServicePage,
+  url: "/service",
+  component: ServicePage,
 };
 
 const aboutRoute: RouteObj = {
-    url: "/about",
-    component: AboutUsPage,
+  url: "/about",
+  component: AboutUsPage,
 };
 
 const contactRoute: RouteObj = {
-    url: "/contact",
-    component: ContactPage,
+  url: "/contact",
+  component: ContactPage,
 };
 
 const menuRoute: RouteObj = {
-    url: "/menu",
-    component: MenuPage,
+  url: "/menu",
+  component: MenuPage,
 };
 
 const NamedRoutes = {
-    home: homeRoute,
-    aboutus: aboutRoute,
-    service: serviceRoute,
-    contact: contactRoute,
-    menu: menuRoute,
+  home: homeRoute,
+  aboutus: aboutRoute,
+  service: serviceRoute,
+  contact: contactRoute,
+  menu: menuRoute,
 };
 
 class AppRoutes extends React.Component {
-    render(): React.ReactNode {
-        return (
-            <Switch>
-                <Route exact path="/" component={NamedRoutes.home.component}></Route>
-                <Route exact path={NamedRoutes.aboutus.url} component={NamedRoutes.aboutus.component}></Route>
-                <Route exact path={NamedRoutes.service.url} component={NamedRoutes.service.component}></Route>
-                <Route exact path={NamedRoutes.contact.url} component={NamedRoutes.contact.component}></Route>
-                <Route exact path={NamedRoutes.menu.url} component={NamedRoutes.menu.component}></Route>
-            </Switch>
-        );
-    }
+  render(): React.ReactNode {
+    return (
+      <Switch>
+        <Route exact path="/" component={NamedRoutes.home.component}></Route>
+        <Route exact path={NamedRoutes.aboutus.url} component={NamedRoutes.aboutus.component}></Route>
+        <Route exact path={NamedRoutes.service.url} component={NamedRoutes.service.component}></Route>
+        <Route exact path={NamedRoutes.contact.url} component={NamedRoutes.contact.component}></Route>
+        <Route exact path={NamedRoutes.menu.url} component={NamedRoutes.menu.component}></Route>
+      </Switch>
+    );
+  }
 }
 
 export { AppRoutes, NamedRoutes };

@@ -1,4 +1,4 @@
 export type RouteObj = {
-    url: string,
-    component: any
+  url: string,
+  component: any
 };
